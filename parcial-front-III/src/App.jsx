@@ -15,13 +15,13 @@ function App() {
     }else setError(true);
   }
   const handleNameChange = (e) => {
-    setError(false);
-    setShow(false);
+    if(error)setError(false)
+    if(show)setShow(false)
     setPersona({...persona, nombre: e.target.value});
   }
   const handleApellidoChange = (e) =>{
-    setError(false);
-    setShow(false);
+    if(error)setError(false)
+    if(show)setShow(false)
     setPersona({...persona, apellido: e.target.value});
   }
   return (
